@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#E4E3E3"
+    tools:context=".MainActivity">
+
+
+    <com.kyanogen.signatureview.SignatureView
+        android:id="@+id/signature_view"
+        android:layout_width="match_parent"
+        android:layout_height="643dp"
+        android:layout_above="@+id/options"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="88dp"
+        app:backgroundColor="#ffffff"
+        app:enableSignature="true"
+        app:penColor="#000000"
+        app:penSize="5dp" />
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+
+        android:layout_width="match_parent"
+        android:layout_height="88dp">
+
+        <LinearLayout
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+
+                android:id="@+id/pencil"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#E4E3E3"
+                android:src="@drawable/longpencil">
+
+            </ImageButton>
+
+            <ImageButton
+
+                android:id="@+id/eraser"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#E4E3E3"
+                android:paddingRight="40dp"
+                android:src="@drawable/shorteraser">
+
+            </ImageButton>
+
+            <ImageButton
+
+                android:id="@+id/info"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:backgroundTint="#E4E3E3"
+                android:paddingRight="40dp"
+
+                android:src="@drawable/info">
+
+
+            </ImageButton>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="239dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+
+                <SeekBar
+                    android:layout_width="1dp"
+                    android:id="@+id/size"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:progress="5"
+                    android:progressTint="#990011"
+
+                    android:thumbTint="#990011">
+
+
+                </SeekBar>
+
+                <TextView
+                    android:id="@+id/sizetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="5dp"
+                    android:textAlignment="center"
+
+
+                    android:textColor="#000000">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/colorpick"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/color"
+                    android:backgroundTint="#E4E3E3"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="19dp"
+                    >
+
+                </ImageButton>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/clear"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/trash"
+                    android:backgroundTint="#E4E3E3"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="29dp"
+                    >
+
+                </ImageButton>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/save"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/floppy"
+                    android:backgroundTint="#E4E3E3"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="29dp"
+                    >
+
+                </ImageButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
